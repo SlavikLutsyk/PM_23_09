@@ -1,0 +1,8 @@
+.hi{
+    background-color: rgb(10, 129, 89);
+    width: 500px;
+    height: 300px;
+}
+body{
+    background-image: url("suntree.jpg");
+}
