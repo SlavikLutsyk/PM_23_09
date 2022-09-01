@@ -1,0 +1,93 @@
+body {
+  background-color: #654dac;
+}
+
+.div-include-html {
+  padding: 0;
+}
+
+.body-div {
+  display: flex;
+  background-color: blue;
+  border-radius: 15px;
+}
+
+.sidebar {
+  background-color: #2b2a48;
+  width: 215px;
+  border-right: 4px solid #2a2945;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.sidebar-header {
+  background-color: #353058;
+  border-bottom: 4px solid #2a2945;
+  padding: 27px 25px;
+  border-top-left-radius: 15px;
+}
+
+.sidebar-header-span {
+  color: #b8b7c5;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.sidebar-svg {
+  float: right;
+}
+
+.sidebar-main-div {
+  padding: 27px 25px;
+}
+
+.sidebar-profile {
+  margin-bottom: 27px;
+}
+
+.profile-span {
+  color: #b5b4bf;
+}
+
+.profile-main-div-span {
+  margin-left: 15px;
+  color: #7a75a6;
+}
+
+.sidebar-addiotional {
+  margin: 30px 0;
+}
+
+.sidebar-addiotional > p > span {
+  color: #b5b4bf;
+}
+
+.sidebar-search > p > span {
+  color: #7a75a6;
+  margin-left: 7px;
+  font-size: 14px;
+}
+
+.sidebar-footer {
+  padding: 10px 25px;
+  background-color: #3d3764;
+  border-bottom-left-radius: 15px;
+  display: flex;
+}
+
+.sidebar-footer > span {
+  color: #6177c9;
+  margin-right: 10px;
+  font-size: 18px;
+  align-self: center;
+}
+
+.sidebar-footer > button {
+  background-color: #789dfb;
+  color: #f2f5ff;
+  font-size: 11px;
+  width: 120px;
+  height: 50px;
+  border-radius: 30px;
+  border: 1px solid #a1bcfc;
+}

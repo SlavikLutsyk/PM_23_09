@@ -1,0 +1,83 @@
+$bodyBackgr: #654dac;
+$borderAside: 4px solid #2a2945;
+$sideBarBackgr:#2b2a48;
+$sideHeadBackgr: #353058;
+$sideheadpad: 27px 25px;
+$border_radius: 15px;
+$span-color: #b5b4bf;
+$profile-main-span: #7a75a6;
+body{
+    background-color: $bodyBackgr;
+}
+.body-div{
+    display: flex;
+    background-color: blue;
+    border-radius: $border_radius;
+    //padding: 5px;
+}
+.sidebar{
+    background-color: $sideBarBackgr;
+    width: 211px;
+    border-right: $borderAside;
+    border-top-left-radius: $border_radius;
+    border-bottom-left-radius: $border_radius;
+}
+.sidebar-header{
+    background-color: $sideHeadBackgr;
+    border-bottom: $borderAside;
+    padding: $sideheadpad;
+    border-top-left-radius: $border_radius;
+}
+.sidebar-header-span{
+    color: #b8b7c5;
+    font-weight: 700;
+    font-size: 20px;
+}
+.sidebar-svg{
+    float: right;
+}
+.sidebar-main-div{
+    padding: $sideheadpad;
+}
+.sidebar-profile{
+    margin-bottom: 27px;
+}
+.profile-span{
+    color: $span-color;  
+}
+.profile-main-div-span{
+    margin-left: 15px;
+    color: $profile-main-span;
+}
+.sidebar-addiotional{
+    margin: 30px 0;
+}
+.sidebar-addiotional>p>span{
+    color: $span-color;
+}
+.sidebar-search>p>span{
+    color: $profile-main-span;
+    margin-left: 7px;
+    font-size: 14px;
+}
+.sidebar-footer{
+    padding: 10px 25px;
+    background-color: #3d3764;
+    border-bottom-left-radius: $border_radius;
+    display: flex;
+}
+.sidebar-footer>span{
+    color: #6177c9;
+    margin-right: 10px;
+    font-size: 18px;
+    align-self: center;
+}
+.sidebar-footer>button{
+    background-color: #789dfb;
+    color: #f2f5ff;
+    font-size: 11px;
+    width: 120px;
+    height: 50px;
+    border-radius: 30px;
+    border: 1px solid #a1bcfc;
+}

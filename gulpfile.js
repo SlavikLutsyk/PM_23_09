@@ -11,6 +11,8 @@ const pump = require ("pump");
 const imagemin = require ("gulp-imagemin");
 const clean = require('gulp-clean');
 const browserSync =require("browser-sync").create();
+const del = require('del');
+const fs = require('fs');
 var reload = browserSync.reload;
 //копіювання HTML файлів в папку dist
 function html_task(cb){
@@ -41,6 +43,26 @@ function sass_task(cb){
 }
 //gulp.task('sass', sass_task);
 exports.sass = sass_task;
+//перекомпільовуємо scss у сss і закидаємо у app/css
+function sass_toCSS_task(cb){  
+    pump([
+        //del(['app/css/styles.css','!app','!app/css']),// видаляємо файл 
+        gulp.src("app/css/styles.css", {read : false}),// видаляємо файл 
+        clean(),
+        // fs.access('app/css/styles.css', (err)=>{
+        //     if(!err) del(['app/css/styles.css','!app','!app/css'])
+        //     gulp.src ( "app/sass/*.scss"),
+        // sass().on('error', sass.logError),
+        // gulp.dest ( "app/css/")
+        // }),
+        gulp.src ( "app/sass/*.scss"),//створюємо потік
+        sass().on('error', sass.logError),//перекомпільовуємо scss у css
+        gulp.dest ( "app/css/")//куди копіюємо 
+    ],
+    cb
+    );
+}
+exports.sassToCSS = sass_toCSS_task;
 //об'єднання і стиснення JS-файлів
 function script_task(cb) {
     pump([
@@ -80,11 +102,12 @@ function watching() {
     gulp.watch("app/*.html").on("change", reload);
     gulp.watch("app/js/*.js").on("change", reload);
     gulp.watch("app/css/*.css").on("change", reload);
-    gulp.watch("app/sass/*.sass").on("change", reload);
+    gulp.watch("app/sass/*.scss").on("change", reload);
     gulp.watch("app/images/*.+(jpg | jpeg | png | gif)").on("change", reload);
     watch ( "app/*.html",  html_task);
     watch ( "app/js/*.js",  script_task);
-    watch ( "app/sass/*.sass",  sass_task);
+    watch ( "app/sass/*.scss",  sass_task);
+    //watch ( "app/sass/*.scss",  sass_toCSS_task);
     watch ( "app/images/*.+(jpg | jpeg | png | gif)", img_task);
 }
 //gulp.task('serve', watching);
