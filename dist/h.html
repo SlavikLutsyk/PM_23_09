@@ -5,29 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script> -->
-    <script src="js/index.js"></script>
-    
-    <title>Lab</title>
+    <title>Document</title>
 </head>
 <body>
-  <!-- <script src="js/index.js"></script>
-  <script src="js/fog.js"></script> -->
-  <!-- bodyDiv -->
-  <div class="body-div">
-    <!-- sidebar -->
-    <div w3-include-html="sidebar.html"></div>
-    <!-- main div -->
-    <!-- <script src="https://github.com/chartjs/Chart.js/releases/download/v2.9.3/Chart.min.js"></script>
-<link rel="stylesheet" href="https://github.com/chartjs/Chart.js/releases/download/v2.9.3/Chart.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script> -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.0.1/Chart.bundle.min.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-    <div w3-include-html="main.html"></div>
-    <script>
-      window.onmouseup=function(){
-        Chart.pluginService.register({//  w   w  w  .  d  e m  o  2  s   .   c o  m 
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <canvas id="myChart" width="400" height="400"></canvas> 
+ <script>
+    Chart.pluginService.register({//  w   w  w  .  d  e m  o  2  s   .   c o  m 
       afterUpdate: function (chart) {
          if (chart.config.options.elements.arc.roundedCornersFor !== undefined) {
             var arc = chart.getDatasetMeta(0).data[chart.config.options.elements.arc.roundedCornersFor];
@@ -114,7 +98,7 @@
          }
       },
    })
-   var ctx = document.getElementById('myPieChart').getContext('2d');
+   var ctx = document.getElementById('myChart').getContext('2d');
         var gradient = ctx.createLinearGradient(0, 0, 0, 400)
     gradient.addColorStop(0, '#7385f8')
     gradient.addColorStop(1, '#803ce2')
@@ -152,26 +136,26 @@
             center: {
                // the longest text that could appear in the center
                maxText: '100%',
-               text: "75%",
-               fontColor: '#8d88bd',
+               text: '67%',
+               fontColor: '#FF6684',
                fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
                fontStyle: 'normal',
                // fontSize: 12,
                // if a fontSize is NOT specified, we will scale (within the below limits) maxText to take up the maximum space in the center
                // if these are not specified either, we default to 1 and 256
                minFontSize: 1,
-               maxFontSize: 24,
+               maxFontSize: 256,
             }
          }
         }
       //plugins: [centerText]
   }
   const myChart = new Chart(ctx,config);
-}
-      </script>
-  </div>
-  <script>
-    includeHTML();
-  </script>
+</script>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-1-circle" viewBox="0 0 16 16">
+    <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002V12H7.971V5.338h-.065L6.072 6.656V5.385l1.899-1.383h1.312Z"/>
+</svg>
+<div id="div">Cl</div> -->
+<img src="img/Yarik.jpg" alt="">
 </body>
 </html>
