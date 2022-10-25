@@ -170,7 +170,7 @@ datasets:[{
    label: 'Line',
    backgroundColor:"#992ed7",
    borderColor:"#992ed7",
-   pointRadius:0.01,
+   pointRadius:0,
    borderWidth: 2,
    fill:false,
   data: [0,1,3,2,5,7,3,6,5,9],
