@@ -1,7 +1,7 @@
 var user;
 window.onload = function(){
    var xhttp = new XMLHttpRequest();
-xhttp.open('GET','js/percent.json', true);
+xhttp.open('GET','js/data.json', true);
 xhttp.send();
 xhttp.onload = function(){
    if(this.status==200){
